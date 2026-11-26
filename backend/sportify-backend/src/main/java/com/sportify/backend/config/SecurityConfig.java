@@ -47,7 +47,15 @@ public class SecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http, UsuarioService usuarios,
             SecurityContextRepository repository) throws Exception {
         var cors = new CorsConfiguration();
-        cors.setAllowedOrigins(List.of("http://localhost:5173"));
+        // Orígenes permitidos: el frontend local y los dominios de FRONTEND_URL (separados por comas)
+        var origenes = new java.util.ArrayList<String>(List.of("http://localhost:5173"));
+        String frontendUrl = System.getenv("FRONTEND_URL");
+        if (frontendUrl != null && !frontendUrl.isBlank()) {
+            for (String origen : frontendUrl.split(",")) {
+                if (!origen.isBlank()) origenes.add(origen.trim());
+            }
+        }
+        cors.setAllowedOrigins(origenes);
         cors.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         cors.setAllowedHeaders(List.of("Content-Type", "Accept", "X-CSRF-TOKEN"));
         cors.setAllowCredentials(true);
