@@ -1,0 +1,239 @@
+.cancha-card {
+    background: var(--color-surface-deep);
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-card);
+    font-family: inherit;
+    color: var(--color-text);
+}
+
+/* Imagen y Badges */
+.cancha-card-image-wrapper {
+    position: relative;
+    height: 180px;
+}
+
+.cancha-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-distancia, .badge-deporte, .badge-promo {
+    position: absolute;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-on-action);
+}
+
+.badge-distancia { 
+    top: 12px; 
+    left: 12px; 
+    background: var(--color-success-soft-bg); 
+    color: var(--color-success-soft);
+    border: 1px solid var(--color-success-semantic);
+}
+
+.badge-deporte { 
+    top: 12px; 
+    right: 12px; 
+    background: var(--color-scrim);
+    backdrop-filter: blur(4px);
+}
+
+.badge-promo { 
+    top: 44px; 
+    left: 12px; 
+    background: var(--color-danger-soft-bg); 
+    color: var(--color-danger-text);
+    border: 1px solid var(--color-danger-semantic);
+}
+
+/* Contenido */
+.cancha-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cancha-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancha-card-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.promo-activa {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-danger-text);
+    background: var(--color-danger-soft-bg);
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.cancha-card-club {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.cancha-card-location {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cancha-card-location svg { width: 14px; height: 14px; }
+
+/* Precio y Rating */
+.cancha-card-rating-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.cancha-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cancha-card-rating svg { width: 16px; height: 16px; }
+
+.cancha-card-prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.precio-tachado {
+    text-decoration: line-through;
+    color: var(--color-text-soft);
+    font-size: 13px;
+}
+
+.precio-actual {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.precio-actual small {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+/* Tags */
+.cancha-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    background: var(--color-surface-mid);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border-soft);
+}
+
+/* Horarios */
+.cancha-card-schedules p {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cancha-card-schedules p svg { width: 14px; height: 14px; }
+
+.schedule-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.schedule-badge {
+    font-size: 12px;
+    border: 1px solid var(--color-border-alt);
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: var(--color-text);
+    background: var(--color-surface-low);
+}
+
+/* Botones */
+.cancha-card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btn-detalles, .btn-reservar {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-detalles {
+    background: var(--color-surface-mid);
+    border: 1px solid var(--color-border-alt);
+    color: var(--color-text);
+}
+
+.btn-detalles:hover { 
+    background: var(--color-surface-hover); 
+}
+
+.btn-reservar {
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-reservar:hover { 
+    background: var(--color-primary-hover); 
+    box-shadow: var(--shadow-glow-lg);
+}
+
+.btn-detalles:focus-visible,
+.btn-reservar:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 3px;
+}
+
+.btn-detalles:disabled,
+.btn-reservar:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}

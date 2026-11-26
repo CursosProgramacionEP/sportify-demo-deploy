@@ -1,0 +1,291 @@
+.mis-equipos-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+.mis-equipos-sidebar {
+    padding: 0;
+    overflow: hidden;
+}
+
+.mis-equipos-sidebar-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-border-soft);
+    background-color: rgba(5, 15, 24, 0.5);
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.mis-equipos-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mis-equipos-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: all 160ms ease;
+}
+
+.mis-equipos-item:hover {
+    background-color: var(--color-surface-mid);
+}
+
+.mis-equipos-item.is-active {
+    background-color: rgba(0, 209, 255, 0.08);
+    border-color: rgba(0, 209, 255, 0.3);
+}
+
+.mis-equipos-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.mis-equipos-item-name {
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mis-equipos-item-meta {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Main Panel ─────────────────────────────────────────────── */
+.mis-equipos-main {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mis-equipos-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border-soft);
+}
+
+.mis-equipos-title-area {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mis-equipos-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.mis-equipos-title {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.mis-equipos-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.mis-equipos-meta-item {
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.mis-equipos-meta-item strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* ── Toolbar de Acciones ────────────────────────────────────── */
+.mis-equipos-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    background-color: rgba(5, 15, 24, 0.4);
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+}
+
+.mis-equipos-toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ── Tabla del Plantel ──────────────────────────────────────── */
+.mis-equipos-plantel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.mis-equipos-plantel-header h3 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Forzamos que el botón de agregar no se aplaste y mantenga su texto en una línea */
+.mis-equipos-plantel-header .btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* ── Modal de Capitán ───────────────────────────────────────── */
+.mis-equipos-capitan-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(4, 9, 15, 0.7);
+    backdrop-filter: blur(6px);
+}
+
+.mis-equipos-capitan-dialog {
+    width: min(420px, 100%);
+    padding: 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    background: var(--color-surface-mid);
+    color: var(--color-text);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+.mis-equipos-capitan-dialog h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mis-equipos-capitan-desc {
+    margin: 0 0 16px;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.mis-equipos-capitan-list {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.mis-equipos-capitan-option {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 8px;
+    background: var(--color-surface-low);
+    color: var(--color-text);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 160ms ease;
+}
+
+.mis-equipos-capitan-option:hover {
+    background: var(--color-surface-mid);
+    border-color: rgba(0, 209, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .mis-equipos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mis-equipos-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mis-equipos-toolbar-group {
+        flex-direction: column;
+    }
+
+    .mis-equipos-toolbar-group .btn,
+    .mis-equipos-toolbar-group .dash-complejos-select-wrap {
+        width: 100%;
+    }
+}
+/* Estilo oscuro para los botones del toolbar */
+.dash-complejos-new.btn-dark {
+    background-color: var(--color-surface-deep);
+    color: var(--color-text);
+    border: 1px solid var(--color-border-soft);
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    font-weight: 600; /* Un poco más sutil que el primario */
+}
+
+.dash-complejos-new.btn-dark:hover:not(:disabled) {
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-border-alt);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.dash-complejos-new.btn-dark:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-surface-deep);
+    border-color: var(--color-border-soft);
+}

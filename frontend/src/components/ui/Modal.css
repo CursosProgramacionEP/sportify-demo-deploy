@@ -1,0 +1,214 @@
+﻿.sportify-dialog {
+  position: relative;
+  width: min(576px, calc(100% - 32px));
+  max-height: calc(100svh - 48px);
+  padding: 32px;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-surface-mid);
+  color: var(--color-text);
+  box-shadow: 0 25px 50px -12px var(--color-shadow-semantic);
+  animation: dash-modal-pop 180ms ease-out;
+}
+
+.sportify-dialog::backdrop {
+  background: var(--color-scrim);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+@keyframes dash-modal-pop {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.dash-modal-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 16px 16px 0 0;
+  background: var(--color-primary);
+}
+
+.dash-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.dash-modal-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 32px;
+}
+
+.dash-modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-text-soft);
+  cursor: pointer;
+  transition: background-color 160ms, color 160ms;
+}
+
+.dash-modal-close:hover:not(:disabled) {
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+}
+
+.dash-modal-close:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.dash-modal-close:active:not(:disabled) {
+  background: var(--color-surface-hover);
+}
+
+.dash-modal-close:disabled {
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.dash-modal-close svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dash-modal-subtitle {
+  margin: 0 0 20px;
+  color: var(--color-text-soft);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.dash-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dash-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.dash-modal-label {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.dash-modal-required {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.dash-modal-field input {
+  width: 100%;
+  padding: 11px 16px;
+  border: 1px solid var(--color-border-modal);
+  border-radius: 12px;
+  background-color: var(--color-surface-low);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  transition: border-color 180ms, box-shadow 180ms;
+}
+
+.dash-modal-field input::placeholder {
+  color: var(--color-text-soft);
+}
+
+.dash-modal-field input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-glow);
+}
+
+.dash-modal-field input:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.dash-modal-field input:disabled {
+  border-color: var(--color-border);
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.dash-modal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dash-modal-error {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.sportify-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.sportify-dialog-actions .btn {
+  border-radius: 12px;
+  padding: 11px 20px;
+  font: 600 14px/20px var(--font-body);
+}
+
+.sportify-dialog-actions .btn-secondary {
+  background: var(--color-surface-deep);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+  box-shadow: none;
+}
+
+@media (max-width: 560px) {
+  .sportify-dialog { padding: 20px; border-radius: 14px; }
+  .dash-modal-title { font-size: 20px; line-height: 28px; }
+  .dash-modal-row { grid-template-columns: 1fr; }
+  .sportify-dialog-actions { flex-direction: column-reverse; }
+  .sportify-dialog-actions .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sportify-dialog {
+    animation: none;
+  }
+}

@@ -1,0 +1,179 @@
+.horario-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.horario-card {
+  padding: 28px;
+}
+
+.horario-card-heading,
+.horario-actions,
+.horario-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.horario-card-heading {
+  margin-bottom: 20px;
+}
+
+.horario-card-heading h2 {
+  margin: 0 0 6px;
+  color: var(--color-text);
+  font-size: 20px;
+}
+
+.horario-card-heading p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.horario-provisional-badge {
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border, rgba(255, 255, 255, 0.15));
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.horario-notice {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--color-primary);
+  border-radius: 6px;
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.horario-list {
+  display: grid;
+  gap: 12px;
+}
+
+.horario-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) minmax(110px, auto);
+  align-items: center;
+  gap: 12px 20px;
+  min-width: 0;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--color-border, rgba(255, 255, 255, 0.12));
+  border-radius: 10px;
+}
+
+.horario-day-name {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.horario-time-field {
+  display: grid;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.horario-time-field input {
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border, rgba(255, 255, 255, 0.18));
+  border-radius: 7px;
+  background: var(--color-surface-deep);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.horario-time-field input[aria-invalid="true"] {
+  border-color: var(--color-danger, #ef4444);
+}
+
+.horario-time-field input:disabled {
+  opacity: 0.55;
+}
+
+.horario-closed-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.horario-closed-field input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.horario-row-error {
+  grid-column: 2 / -1;
+  min-height: 1em;
+  color: var(--color-danger, #ef4444);
+  font-size: 12px;
+}
+
+.horario-feedback {
+  margin-top: 16px;
+}
+
+.horario-actions {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border, rgba(255, 255, 255, 0.12));
+}
+
+.horario-back-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.horario-back-link:hover {
+  text-decoration: underline;
+}
+
+.horario-action-buttons {
+  justify-content: flex-end;
+}
+
+@media (max-width: 720px) {
+  .horario-card {
+    padding: 18px;
+  }
+
+  .horario-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .horario-day-name,
+  .horario-closed-field {
+    grid-column: span 2;
+  }
+
+  .horario-row-error {
+    grid-column: 1 / -1;
+  }
+
+  .horario-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .horario-action-buttons {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .horario-action-buttons > * {
+    flex: 1;
+  }
+}

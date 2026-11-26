@@ -1,0 +1,60 @@
+:root[data-theme] .home-public .public-navbar {
+  border-bottom-color: var(--color-border-semantic);
+  background: var(--color-surface-glass-token);
+  box-shadow: 0 2px 10px var(--color-shadow-semantic);
+}
+
+:root[data-theme] .home-public .public-navbar .brand-sportify--home {
+  color: var(--color-action);
+}
+
+:root[data-theme] .home-public .public-navbar .public-navbar-link {
+  color: var(--color-text-secondary);
+}
+
+:root[data-theme] .home-public .public-navbar .public-navbar-link:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-action);
+}
+
+:root[data-theme] .home-public .public-navbar .public-navbar-link.is-active {
+  background: var(--color-action);
+  color: var(--color-on-action);
+}
+
+:root[data-theme] .home-public .public-navbar .nav-btn-login {
+  color: var(--color-action);
+}
+
+:root[data-theme] .home-public .public-navbar .nav-btn-login:hover,
+:root[data-theme] .home-public .public-navbar .nav-btn-login:focus-visible {
+  border-color: var(--color-action);
+  background: var(--color-action);
+  color: var(--color-on-action);
+}
+
+:root[data-theme] .home-public .public-navbar .nav-btn-login:active {
+  border-color: var(--color-action-hover);
+  background: var(--color-action-hover);
+  color: var(--color-on-action);
+}
+
+:root[data-theme] .home-public .public-navbar .nav-btn-register {
+  border-color: var(--brand-lime);
+  background: var(--brand-lime);
+  color: var(--brand-forest);
+}
+
+:root[data-theme] .home-public .public-navbar .public-navbar-toggle {
+  border-color: var(--color-border-semantic);
+  background: var(--color-surface);
+  color: var(--color-action);
+}
+
+:root[data-theme] .home-public .public-navbar .public-navbar-link:focus-visible,
+:root[data-theme] .home-public .public-navbar .nav-btn-login:focus-visible,
+:root[data-theme] .home-public .public-navbar .nav-btn-register:focus-visible,
+:root[data-theme] .home-public .public-navbar .brand-sportify--home:focus-visible,
+:root[data-theme] .home-public .public-navbar .public-navbar-toggle:focus-visible {
+  outline-color: var(--color-focus-ring);
+}

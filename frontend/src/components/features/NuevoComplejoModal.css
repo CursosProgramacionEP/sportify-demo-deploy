@@ -1,0 +1,59 @@
+    .dash-modal-status-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 42px;
+    padding: 4px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background-color: var(--color-surface-low);
+    }
+
+    .dash-modal-status-option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex: 1;
+    height: 100%;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text-soft);
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: background-color 160ms, border-color 160ms, color 160ms;
+    }
+
+    .dash-modal-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    transition: background-color 160ms;
+    }
+
+    .dash-modal-status-option.is-active-green {
+    background-color: var(--color-surface-mid);
+    border-color: rgba(0, 229, 153, 0.3);
+    color: #00e599;
+    font-weight: 700;
+    }
+
+    .dash-modal-status-option.is-active-green .dash-modal-status-dot {
+    background-color: #00e599;
+    }
+
+    .dash-modal-status-option.is-active-red {
+    background-color: rgba(30, 13, 16, 0.6);
+    border-color: rgba(255, 180, 171, 0.35);
+    color: var(--color-danger-text);
+    font-weight: 700;
+    }
+
+    .dash-modal-status-option.is-active-red .dash-modal-status-dot {
+    background-color: var(--color-danger-text);
+    }

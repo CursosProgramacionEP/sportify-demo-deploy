@@ -1,0 +1,23 @@
+.partidos-resultado {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.partidos-resultado.is-victoria {
+    background-color: var(--color-success-soft-bg);
+    color: var(--color-success-soft);
+}
+
+.partidos-resultado.is-empate {
+    background-color: var(--color-warning-soft-bg);
+    color: var(--color-warning-soft);
+}
+
+.partidos-resultado.is-derrota {
+    background-color: var(--color-danger-soft-bg);
+    color: var(--color-danger-text);
+}

@@ -1,0 +1,218 @@
+    .config-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    }
+
+    .config-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+    }
+
+    /* --- TARJETA DE PERFIL (IZQUIERDA) --- */
+    .config-profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+    background-color: var(--color-surface-deep);
+    border: 1px solid var(--color-border-soft);
+    border-radius: 16px;
+    text-align: center;
+    }
+
+    .config-avatar-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    }
+
+    .config-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 209, 255, 0.2) 0%, rgba(0, 209, 255, 0.05) 100%);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 36px;
+    font-weight: 700;
+    box-shadow: 0 0 24px rgba(0, 209, 255, 0.15);
+    }
+
+    .config-name {
+    margin: 0 0 4px 0;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 700;
+    }
+
+    .config-email {
+    margin: 0 0 16px 0;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    }
+
+    .config-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    }
+
+    .config-badge {
+    padding: 4px 12px;
+    background-color: rgba(0, 209, 255, 0.1);
+    color: var(--color-primary);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    }
+
+    .config-profile-footer {
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    }
+
+    .config-status-dot {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-success-soft);
+    }
+
+    .config-status-dot::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    }
+
+    /* --- PANEL PRINCIPAL (DERECHA) --- */
+    .config-main-panel {
+    background-color: var(--color-surface-deep);
+    border: 1px solid var(--color-border-soft);
+    border-radius: 16px;
+    overflow: hidden;
+    }
+
+    .config-section {
+    padding: 32px;
+    }
+
+    .config-section-header {
+    margin-bottom: 24px;
+    }
+
+    .config-section-header h3 {
+    margin: 0 0 6px 0;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 600;
+    }
+
+    .config-section-header p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    }
+
+    .config-divider {
+    height: 1px;
+    background-color: var(--color-border-soft);
+    width: 100%;
+    }
+
+    /* --- FORMULARIO E INPUTS --- */
+    .config-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .config-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    }
+
+    .config-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    }
+
+    .config-field label {
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 500;
+    }
+
+    .config-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    }
+
+    .config-icon {
+    position: absolute;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    color: var(--color-text-muted);
+    pointer-events: none;
+    }
+
+    .config-input-wrapper input {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    background-color: var(--color-surface-mid);
+    border: 1px solid var(--color-border-alt);
+    border-radius: 10px;
+    color: var(--color-text);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    }
+
+    .config-input-wrapper input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 209, 255, 0.15);
+    }
+
+    .config-input-wrapper input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    }
+
+    .config-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+    .config-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .config-row {
+        grid-template-columns: 1fr;
+    }
+    }

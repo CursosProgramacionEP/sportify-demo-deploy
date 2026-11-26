@@ -1,0 +1,120 @@
+:root[data-theme] .pagina-login {
+  background:
+    radial-gradient(ellipse at top left, var(--color-action-soft-bg), transparent 45%),
+    radial-gradient(ellipse at bottom right, var(--color-success-bg), transparent 40%),
+    var(--color-bg);
+}
+
+:root[data-theme] .pagina-login .marca-login p,
+:root[data-theme] .pagina-login .tarjeta-login .campo label,
+:root[data-theme] .pagina-login footer,
+:root[data-theme] .pagina-login .recordar-login {
+  color: var(--color-text-secondary);
+}
+
+:root[data-theme] .pagina-login .tarjeta-login {
+  border-color: var(--color-border-semantic);
+  background: var(--color-surface-glass-token);
+  box-shadow: var(--shadow-card);
+}
+
+:root[data-theme] .pagina-login .tarjeta-login .campo input {
+  border-color: var(--color-border-semantic);
+  background: var(--color-surface-low);
+  color: var(--color-text-primary);
+}
+
+:root[data-theme] .pagina-login .tarjeta-login .campo input::placeholder {
+  color: var(--color-text-soft-semantic);
+}
+
+:root[data-theme] .pagina-login .tarjeta-login .campo input:focus {
+  border-color: var(--color-focus-ring);
+  box-shadow: 0 0 0 2px var(--color-action-glow);
+}
+
+:root[data-theme] .pagina-login .tarjeta-login .campo input:-webkit-autofill,
+:root[data-theme] .pagina-login .tarjeta-login .campo input:-webkit-autofill:hover,
+:root[data-theme] .pagina-login .tarjeta-login .campo input:-webkit-autofill:active {
+  border-color: var(--color-border-semantic);
+  background-color: var(--color-surface-low) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--color-surface-low) inset !important;
+  box-shadow: 0 0 0 1000px var(--color-surface-low) inset !important;
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+  caret-color: var(--color-text-primary) !important;
+}
+
+:root[data-theme] .pagina-login .tarjeta-login .campo input:-webkit-autofill:focus {
+  border-color: var(--color-focus-ring);
+  -webkit-box-shadow:
+    0 0 0 1000px var(--color-surface-low) inset,
+    0 0 0 2px var(--color-action-glow) !important;
+  box-shadow:
+    0 0 0 1000px var(--color-surface-low) inset,
+    0 0 0 2px var(--color-action-glow) !important;
+}
+
+:root[data-theme] .pagina-login .recordar-login input {
+  accent-color: var(--color-action);
+  border-color: var(--color-border-semantic);
+  background-color: var(--color-surface-low);
+}
+
+:root[data-theme] .pagina-login .recordar-login input:checked {
+  accent-color: var(--color-action);
+}
+
+:root[data-theme] .pagina-login .recordar-login input:hover:not(:disabled) {
+  accent-color: var(--color-action-hover);
+}
+
+:root[data-theme] .pagina-login .recordar-login input:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+:root[data-theme] .pagina-login .recordar-login input:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+:root[data-theme] .pagina-login .tarjeta-login .enviar-login {
+  border-color: var(--color-action);
+  background: var(--color-action);
+  color: var(--color-on-action);
+  box-shadow: var(--shadow-glow);
+}
+
+:root[data-theme] .pagina-login .tarjeta-login .enviar-login:hover:not(:disabled) {
+  background: var(--color-action-hover);
+  box-shadow: var(--shadow-glow-lg);
+}
+
+:root[data-theme] .pagina-login footer,
+:root[data-theme] .pagina-login .tarjeta-login footer {
+  border-top-color: var(--color-border-soft-semantic);
+}
+
+:root[data-theme] .pagina-login footer a,
+:root[data-theme] .pagina-login .tarjeta-login footer a,
+:root[data-theme] .pagina-login .recuperar-login {
+  color: var(--color-action);
+}
+
+:root[data-theme] .pagina-login .volver-inicio {
+  border-color: var(--color-border-semantic);
+  background: var(--color-surface-glass-token);
+  color: var(--color-action);
+}
+
+:root[data-theme] .pagina-login .volver-inicio:hover {
+  border-color: var(--color-action);
+  background: var(--color-surface-hover);
+  color: var(--color-text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme] .pagina-login .volver-inicio {
+    transition: none;
+  }
+}

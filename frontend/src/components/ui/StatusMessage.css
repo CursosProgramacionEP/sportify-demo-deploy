@@ -1,0 +1,17 @@
+.mensaje {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.mensaje.error {
+  color: var(--color-danger-text);
+  background-color: var(--color-danger-bg);
+}
+
+.mensaje.exito {
+  color: var(--color-success-text);
+  background-color: var(--color-success-bg);
+}

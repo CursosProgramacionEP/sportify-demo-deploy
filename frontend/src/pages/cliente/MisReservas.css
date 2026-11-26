@@ -1,0 +1,53 @@
+.reserva-estado {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.reserva-estado.is-pendiente {
+    background-color: var(--color-warning-soft-bg);
+    color: var(--color-warning-soft);
+}
+
+.reserva-estado.is-confirmada {
+    background-color: var(--color-success-soft-bg);
+    color: var(--color-success-soft);
+}
+
+.reserva-estado.is-cancelada {
+    background-color: var(--color-danger-soft-bg);
+    color: var(--color-danger-text);
+}
+
+.reserva-acciones {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.reserva-accion {
+    padding: 4px 12px;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reserva-accion:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.reserva-accion.is-danger {
+    color: var(--color-danger-text);
+    border-color: var(--color-danger);
+}
+
+.reserva-accion.is-danger:hover {
+    background-color: var(--color-danger-soft-bg);
+}

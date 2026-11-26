@@ -1,0 +1,5 @@
+# Copiar como application-local.properties y activar el perfil local.
+# Completar solo en la copia privada, que Git ignora.
+spring.datasource.url=jdbc:postgresql://localhost:5432/sportify_bd
+spring.datasource.username=REEMPLAZAR_USUARIO_LOCAL
+spring.datasource.password=REEMPLAZAR_CLAVE_LOCAL

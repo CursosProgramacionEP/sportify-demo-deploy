@@ -1,0 +1,27 @@
+.brand-sportify {
+  display: inline-block;
+  color: var(--color-primary-light);
+  font-family: Montserrat, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.17;
+  text-decoration: none;
+}
+
+.brand-sportify--auth {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -2.4px;
+}
+
+.brand-sportify--home {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.brand-sportify--dashboard,
+.brand-sportify--footer {
+  font-size: 24px;
+  line-height: 32px;
+}

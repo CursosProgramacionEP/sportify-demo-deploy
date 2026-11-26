@@ -1,0 +1,65 @@
+.table-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.table-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-mid);
+  cursor: pointer;
+  transition: background-color 160ms, color 160ms;
+}
+
+.table-action-button--view {
+  color: var(--color-info-text);
+}
+
+.table-action-button--edit {
+  color: var(--color-warning-soft);
+}
+
+.table-action-button--delete {
+  color: var(--color-danger-text);
+}
+
+.table-action-button:hover:not(:disabled) {
+  background: var(--color-surface-hover);
+}
+
+.table-action-button:active:not(:disabled) {
+  filter: brightness(0.92);
+}
+
+.table-action-button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.table-action-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.table-action-button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .table-action-button {
+    transition: none;
+  }
+}

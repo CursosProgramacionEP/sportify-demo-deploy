@@ -1,0 +1,37 @@
+.buscar-filtros > div { align-items: center; }
+
+.buscar-complejo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary);
+}
+
+.buscar-complejo select,
+.buscar-complejo input {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border-semantic);
+  border-radius: 999px;
+  background: var(--color-surface-low);
+  color: var(--color-text-primary);
+  font: inherit;
+}
+
+/* Botón "Ver disponibilidad" con el mismo estilo del link "Reservar" */
+.home .home-reserva button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--color-action);
+  color: var(--color-on-action);
+  font: 600 14px/20px Montserrat, Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+}
+
+.home .home-reserva button:hover {
+  background: var(--color-action-hover);
+  box-shadow: var(--shadow-glow-lg);
+}

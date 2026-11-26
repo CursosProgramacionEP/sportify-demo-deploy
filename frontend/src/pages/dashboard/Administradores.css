@@ -1,0 +1,268 @@
+.dash-admins-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+    background-color: var(--color-surface-deep);
+    overflow: hidden;
+    box-shadow:
+        0 8px 10px -6px var(--color-shadow-semantic),
+        0 20px 25px -5px var(--color-shadow-semantic);
+    }
+
+    .dash-admins-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    background-color: var(--color-surface-mid);
+    border-bottom: 1px solid var(--color-border-soft);
+    }
+
+    .dash-admins-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    flex: 1; 
+    }
+
+    /* Título de la izquierda */
+    .dash-admins-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+
+    .dash-admins-toolbar-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary-soft);
+    }
+
+    .dash-admins-toolbar-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    }
+
+    .dash-admins-toolbar-title {
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    white-space: nowrap;
+    }
+
+    .dash-admins-toolbar-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    background-color: var(--color-action-soft-bg);
+    color: var(--color-action);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    }
+
+    /* Buscador */
+    .dash-admins-search {
+    position: relative;
+    flex: 0 1 320px;
+    min-width: 220px;
+    margin-left: auto;
+    }
+
+    .dash-admins-search input {
+    width: 100%;
+    padding: 11px 16px 11px 40px;
+    border: 1px solid var(--color-border-alt);
+    border-radius: 12px;
+    background-color: var(--color-surface-mid);
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    transition: border-color 180ms, box-shadow 180ms;
+    }
+
+    .dash-admins-search input::placeholder {
+    color: var(--color-text-soft);
+    }
+
+    .dash-admins-search input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-glow);
+    }
+
+    .dash-admins-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    color: var(--color-text-muted);
+    pointer-events: none;
+    }
+
+    .dash-admins-search-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    }
+
+    .dash-admins-col-nombre {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    }
+
+    .dash-admins-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    }
+
+    .dash-admins-avatar.is-cyan {
+    background-color: var(--color-action-soft-bg);
+    color: var(--color-action);
+    }
+
+    .dash-admins-avatar.is-violet {
+    background-color: var(--color-action-soft-bg);
+    color: var(--color-action-soft);
+    }
+
+    .dash-admins-avatar.is-green {
+    background-color: var(--color-success-soft-bg);
+    color: var(--color-success-soft);
+    }
+
+    .dash-admins-avatar.is-amber {
+    background-color: var(--color-warning-soft-bg);
+    color: var(--color-warning-soft);
+    }
+
+    .dash-admins-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    min-width: 0;
+    }
+
+    .dash-admins-nombre {
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+    .dash-admins-texto {
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+    .dash-admins-remove-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-surface-mid);
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: background-color 160ms, color 160ms;
+    white-space: nowrap;
+    }
+
+    .dash-admins-remove-btn:hover {
+    background-color: var(--color-danger-bg);
+    color: var(--color-danger-text);
+    }
+
+    .dash-admins-remove-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    }
+
+    .dash-admins-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    background-color: var(--color-surface-mid);
+    border-top: 1px solid var(--color-border-soft);
+    }
+
+    .dash-admins-paginator-info {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: 16px;
+    }
+
+    @media (max-width: 900px) {
+    .dash-admins-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dash-admins-filters {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .dash-admins-search {
+        width: 100%;
+        flex: 1 1 auto;
+        margin-left: 0;
+    }
+}

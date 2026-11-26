@@ -1,0 +1,278 @@
+.pagina-login {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 32px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  background:
+    radial-gradient(ellipse at top left, rgba(20, 209, 255, 0.05), transparent 45%),
+    radial-gradient(ellipse at bottom right, rgba(42, 229, 0, 0.07), transparent 40%),
+    radial-gradient(circle at 50% 0%, rgba(20, 209, 255, 0.15), transparent 50%),
+    var(--color-bg-dark);
+}
+
+.contenedor-login {
+  width: 100%;
+  max-width: 480px;
+}
+
+.marca-login {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.marca-login h1 {
+  margin: 0;
+}
+
+.marca-login p {
+  margin: 8px 0 0;
+  color: #c5c6cd;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.tarjeta-login {
+  padding: 48px;
+  background: var(--color-surface-glass);
+  border: 1px solid rgba(230, 241, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.pagina-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tarjeta-login h2 {
+  margin: 0 0 24px;
+  font: 600 24px/32px Montserrat, Arial, sans-serif;
+}
+
+.tarjeta-login form {
+  gap: 24px;
+}
+
+.tarjeta-login .campo {
+  gap: 4px;
+}
+
+.tarjeta-login .campo label {
+  color: #c5c6cd;
+  line-height: 16px;
+}
+
+.etiqueta-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tarjeta-login .recuperar-login {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #a6e6ff;
+  font: 400 14px/20px var(--font-body);
+  opacity: 1;
+}
+
+.entrada-login {
+  position: relative;
+}
+
+.entrada-login svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #8f9097;
+  pointer-events: none;
+}
+
+.tarjeta-login svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.tarjeta-login .campo input {
+  padding: 12px 12px 12px 40px;
+  border: 2px solid #202b35;
+  border-radius: 8px;
+  background: #0a192f;
+  color: var(--color-text);
+  font: 400 16px/24px var(--font-body);
+  transition: border-color 180ms, box-shadow 180ms;
+}
+
+.tarjeta-login .campo input::placeholder {
+  color: #c5c6cd;
+  opacity: 0.8;
+}
+
+.tarjeta-login .campo input:focus {
+  border-color: #00d1ff;
+  box-shadow: 0 0 0 2px rgba(0, 209, 255, 0.3);
+}
+
+.recordar-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c5c6cd;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recordar-login input {
+  appearance: auto;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1px solid var(--color-border-semantic);
+  border-radius: 4px;
+  background: var(--color-surface-low);
+  accent-color: var(--color-action);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.tarjeta-login .enviar-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 12px 24px;
+  min-height: 52px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: #00d1ff;
+  color: #0a192f;
+  font: 600 16px/24px Montserrat, Arial, sans-serif;
+  box-shadow: 0 0 15px rgba(0, 209, 255, 0.3);
+  transition: background 180ms, box-shadow 180ms;
+}
+
+.tarjeta-login .enviar-login:hover:not(:disabled) {
+  background: #b7eaff;
+  box-shadow: 0 0 25px rgba(0, 209, 255, 0.5);
+}
+
+.tarjeta-login :is(button, a):focus-visible {
+  outline: 2px solid #00d1ff;
+  outline-offset: 4px;
+}
+
+.tarjeta-login footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(68, 71, 77, 0.2);
+  color: #c5c6cd;
+  line-height: 24px;
+}
+
+.pagina-login footer {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #c5c6cd;
+  font-size: 14px;
+  text-align: center;
+}
+
+.pagina-login footer a {
+  color: #a6e6ff;
+}
+
+.tarjeta-login footer a {
+  margin-left: 4px;
+  color: #a6e6ff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tarjeta-login footer a:hover {
+  color: #b7eaff;
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .pagina-login {
+    padding: 40px 16px;
+  }
+
+  .marca-login {
+    margin-bottom: 40px;
+  }
+
+  .tarjeta-login {
+    padding: 32px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta-login .campo input,
+  .tarjeta-login .enviar-login {
+    transition: none;
+  }
+}
+
+/* Estilos para el botón de Volver al inicio */
+.volver-inicio {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(17, 34, 64, 0.6);
+  border: 1px solid rgba(166, 230, 255, 0.3);
+  border-radius: 999px;
+  color: #a6e6ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.volver-inicio svg {
+  width: 18px;
+  height: 18px;
+}
+
+.volver-inicio:hover {
+  background: rgba(166, 230, 255, 0.1);
+  border-color: #a6e6ff;
+  color: #ffffff;
+  transform: translateX(-3px);
+}
+
+@media (max-width: 520px) {
+  .volver-inicio {
+    top: 16px;
+    left: 16px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

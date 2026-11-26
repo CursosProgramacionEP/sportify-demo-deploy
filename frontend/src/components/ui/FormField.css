@@ -1,0 +1,110 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.campo input {
+  width: 100%;
+  padding: 13px 14px;
+  font-size: 15px;
+  border: 1px solid var(--color-border-alt);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-low);
+  color: var(--color-text);
+  outline: none;
+}
+
+.campo input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+.campo input:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.campo input:disabled {
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+}
+
+.campo input::placeholder {
+  color: var(--color-text-soft);
+}
+
+.tarjeta-login .campo .entrada-sin-icono input {
+  padding-left: 12px;
+}
+
+.campo input[aria-invalid="true"] {
+  border-color: var(--color-error-text);
+}
+
+.entrada-contrasena {
+  position: relative;
+}
+
+.entrada-contrasena input {
+  padding-right: 44px;
+}
+
+.tarjeta-login .campo .entrada-contrasena input {
+  padding-right: 44px;
+}
+
+.entrada-contrasena .boton-ver-contrasena {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text-soft);
+  cursor: pointer;
+}
+
+.entrada-contrasena .boton-ver-contrasena:hover,
+.entrada-contrasena .boton-ver-contrasena[aria-pressed="true"] {
+  color: var(--color-primary);
+}
+
+.entrada-contrasena .boton-ver-contrasena:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.entrada-contrasena .boton-ver-contrasena:disabled {
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.entrada-login .boton-ver-contrasena svg {
+  position: static;
+  transform: none;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

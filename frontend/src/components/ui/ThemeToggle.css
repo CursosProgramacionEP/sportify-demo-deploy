@@ -1,0 +1,108 @@
+.theme-toggle {
+  display: inline-grid;
+  min-width: 44px;
+  min-height: 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--color-shadow-semantic);
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.theme-toggle:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-surface-hover);
+  box-shadow: 0 0 0 3px var(--color-action-soft-bg);
+}
+
+.theme-toggle:active:not(:disabled) {
+  background: var(--color-action);
+  border-color: var(--color-action);
+  color: var(--color-on-action);
+  box-shadow: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.theme-toggle:disabled {
+  border-color: var(--color-border);
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  border-color: var(--color-border-strong-semantic);
+  background: var(--color-surface-alt);
+  color: var(--color-action);
+  box-shadow: 0 2px 8px var(--color-shadow-semantic), 0 0 0 1px var(--color-action-soft-bg);
+}
+
+:root[data-theme="dark"] .theme-toggle:hover:not(:disabled) {
+  border-color: var(--color-action);
+  background: var(--color-surface-hover);
+  color: var(--color-action-hover);
+  box-shadow: 0 0 0 3px var(--color-action-soft-bg);
+}
+
+:root[data-theme="dark"] .theme-toggle:disabled {
+  border-color: var(--color-border);
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  box-shadow: none;
+}
+
+.theme-toggle--public {
+  flex: 0 0 44px;
+}
+
+.theme-toggle--auth {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+@media (max-width: 900px) {
+  .theme-toggle--dashboard {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle--auth {
+    top: 12px;
+    right: 12px;
+  }
+
+  .theme-toggle--public {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}
