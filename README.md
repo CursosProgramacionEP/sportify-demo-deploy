@@ -1,4 +1,4 @@
-> **Demo de despliegue Java — Curso Integrador I (UTP).** Copia del proyecto Sportify del grupo de Arellan Blanco Leonardo, usada en clase para mostrar cómo publicar un sistema React + Spring Boot con servicios gratuitos.
+> **Demo de despliegue Java — Curso Integrador I (UTP).** Copia del proyecto Sportify, usada en clase para mostrar cómo publicar un sistema React + Spring Boot con servicios gratuitos.
 >
 > | Pieza | Servicio | URL |
 > |---|---|---|
@@ -140,13 +140,7 @@ Ver una página no demuestra que todas las funciones estén conectadas a datos p
 
 Autoría documental: **Equipo Sportify**.
 
-| Integrante | Responsabilidad |
-| --- | --- |
-| Donayre Flores Franco Maximo | Desarrollo frontend |
-| Quispe Huallpa Elizabet Guadalupe | Desarrollo frontend |
-| Hilario Vera Jack Jeremy | Desarrollo backend |
-| Arellan Blanco Leonardo Daniel | Desarrollo backend |
-| Umpire Paulo | Desarrollo backend |
+Integrantes: Equipo Sportify (Curso Integrador I).
 
 | Entregable | Enlace / dato |
 | --- | --- |
