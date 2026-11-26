@@ -1,3 +1,13 @@
+> **Demo de despliegue Java — Curso Integrador I (UTP).** Copia del proyecto Sportify del grupo de Arellan Blanco Leonardo, usada en clase para mostrar cómo publicar un sistema React + Spring Boot con servicios gratuitos.
+>
+> | Pieza | Servicio | URL |
+> |---|---|---|
+> | Frontend (React + Vite) | Vercel | https://sportify-demo.vercel.app |
+> | Backend (Spring Boot 4, Java 21, Docker) | Render | https://sportify-api-o9h6.onrender.com/api/canchas |
+> | Base de datos (PostgreSQL) | Neon | tablas creadas por Hibernate (`ddl-auto=update`) |
+>
+> Cambios para desplegar (un commit cada uno): administrador inicial desde `ADMIN_EMAIL`/`ADMIN_PASSWORD`, puerto `PORT`, perfil `SPRING_PROFILES_ACTIVE`, CORS con `FRONTEND_URL`, `Dockerfile` y `frontend/vercel.json` (Vercel reenvía `/api` a Render para que la cookie de sesión funcione).
+
 # Sportify
 
 Sportify es un proyecto académico para administrar complejos deportivos y facilitar a los usuarios la consulta de canchas y la organización de equipos y partidos. El repositorio contiene una aplicación web React y una API REST con Spring Boot y PostgreSQL. El proyecto sigue en desarrollo: algunas pantallas están conectadas a datos reales y otras muestran información de demostración o tienen operaciones pendientes. El [manual de usuario](docs/MANUAL_USUARIO.md) describe los flujos disponibles.
